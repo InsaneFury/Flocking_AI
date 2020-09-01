@@ -8,9 +8,11 @@ public class Flock : MonoBehaviour
     List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehavior behavior;
 
+    [Header("Spawning Settings")]
     [Range(10, 500)]
     public int startingCount = 250;
     public float agentDensity = 5f;
+    public Transform spawnPosition;
 
     [Range(1f, 100f)]
     public float driveFactor = 10f;
@@ -36,7 +38,7 @@ public class Flock : MonoBehaviour
         {
             FlockAgent agentToSpawn = Instantiate(
                 agentPrefab,
-                Random.insideUnitSphere * startingCount * agentDensity,
+                Random.insideUnitSphere * startingCount * agentDensity + spawnPosition.position,
                 Random.rotation,
                 transform
                 );
