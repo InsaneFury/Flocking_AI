@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 130.95213, g: 162.25677, b: 214.77875, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -422,7 +422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &406195711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54e810d691b82d40b931df59b397592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 2768131411926086714, guid: de9ca7286d2e59a418cda0134bedd729, type: 3}
+  agentPrefab: {fileID: 4713423677781455106, guid: 95588a9597a4bdf46bda2c02385fd74e, type: 3}
   behavior: {fileID: 11400000, guid: 00260dfca1d40c04ebd8fb859b4dae8b, type: 2}
   startingCount: 100
   agentDensity: 0.08
@@ -487,15 +487,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54e810d691b82d40b931df59b397592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 2768131411926086714, guid: 47f90d4fecb9a7e40b052cb48ef2d343, type: 3}
+  agentPrefab: {fileID: 4713423677781455106, guid: 95588a9597a4bdf46bda2c02385fd74e, type: 3}
   behavior: {fileID: 11400000, guid: 00260dfca1d40c04ebd8fb859b4dae8b, type: 2}
-  startingCount: 100
+  startingCount: 300
   agentDensity: 0.08
   spawnPosition: {fileID: 1291318936}
   driveFactor: 10
-  maxSpeed: 10
+  maxSpeed: 5
   neighborRadius: 5
-  avoidanceRadiusMultiplier: 2
+  avoidanceRadiusMultiplier: 1
 --- !u!4 &433546701
 Transform:
   m_ObjectHideFlags: 0
@@ -574,7 +574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &640790806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54e810d691b82d40b931df59b397592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 2768131411926086714, guid: 869270e1c3ebcf2499e5ea60dccbefe0, type: 3}
+  agentPrefab: {fileID: 4713423677781455106, guid: 95588a9597a4bdf46bda2c02385fd74e, type: 3}
   behavior: {fileID: 11400000, guid: 00260dfca1d40c04ebd8fb859b4dae8b, type: 2}
   startingCount: 100
   agentDensity: 0.08
