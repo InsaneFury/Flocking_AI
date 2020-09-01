@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 130.95044, g: 162.22789, b: 214.71747, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 56e85d5dc4d99b24f9b01a6f086bd74d, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 246cc4825bc78da4e995f01d5c610dd0, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 3ae8432a034aba548b6c9dffc31f7fdc, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentPrefab: {fileID: 2768131411926086714, guid: de9ca7286d2e59a418cda0134bedd729, type: 3}
   behavior: {fileID: 11400000, guid: 00260dfca1d40c04ebd8fb859b4dae8b, type: 2}
-  startingCount: 10
+  startingCount: 100
   agentDensity: 0.08
   spawnPosition: {fileID: 1291318936}
   driveFactor: 10
@@ -1368,7 +1368,7 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
-  clearColorMode: 1
+  clearColorMode: 0
   backgroundColorHDR: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
   clearDepth: 1
   volumeLayerMask:
@@ -1974,7 +1974,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 5500
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 7.08e-43, y: 4.97e-43, z: 0, w: 0.8261771}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0.53
