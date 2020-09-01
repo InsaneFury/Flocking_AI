@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5bb8853ca50cd49bb669b769913241, type: 3}
+  m_Name: Avoid Obstacles Flock Compositor
+  m_EditorClassIdentifier: 
+  behaviors:
+  - {fileID: 11400000, guid: e08d9e47f0b9c2a4fa66c4b25f35817b, type: 2}
+  - {fileID: 11400000, guid: 4a1dd55876e5c1a4ba8c577c004146f6, type: 2}
+  - {fileID: 11400000, guid: dd459660ee13a82408f116e115be4a61, type: 2}
+  - {fileID: 11400000, guid: af20bb8f9681e1f479d79123046a8e07, type: 2}
+  - {fileID: 11400000, guid: 7fed3c747419c004e98dd38a23e9311e, type: 2}
+  weights:
+  - 4
+  - 1
+  - 2
+  - 0.5
+  - 5
