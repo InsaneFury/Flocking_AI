@@ -23,6 +23,9 @@ public class Flock : MonoBehaviour
     [Range(0f, 20f)]
     public float avoidanceRadiusMultiplier = 0.5f;
 
+    [Header("Waypoints Behavior")]
+    public Transform[] points;
+
     float squareMaxSpeed = 1f;
     float squareNeighborRadius = 1f;
     float squareAvoidanceRadius = 1f;
@@ -55,7 +58,7 @@ public class Flock : MonoBehaviour
         {
             List<Transform> context = GetNearByObjects(agent);
 
-            Vector3 move = behavior.CalculateMove(agent, context, this);
+            Vector3 move = behavior.CalculateMove(agent, context, this,points);
             move *= driveFactor;
             if (move.sqrMagnitude > squareMaxSpeed)
             {

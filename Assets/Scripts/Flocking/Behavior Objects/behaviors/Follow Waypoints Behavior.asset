@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f9ff8e1dd40a44086ea878a2092b06, type: 3}
+  m_Name: Follow Waypoints Behavior
+  m_EditorClassIdentifier: 
+  filter: {fileID: 0}
+  agentSmoothTime: 0.5
+  minDistanceToNext: 2
+  currentPoint: 0
+  WayPoints:
+  - {fileID: 9017671063167614457, guid: 4c4d88388b9762947bcb0e41d3588728, type: 3}
+  - {fileID: 7223414473720116880, guid: 8e31fbafd81f6754ab0b3084270cb55a, type: 3}
+  - {fileID: 9182824572861967201, guid: 98af620e48c505b4dbe6335d68e30580, type: 3}
+  - {fileID: 1020066162357047972, guid: 7401371d70b9dd24d9b9b75a0bc5edbb, type: 3}
+  - {fileID: 5232357457611634800, guid: 416c1549d8b531f4f908cbeb727a218c, type: 3}
+  - {fileID: 4404081080855025576, guid: 8b6d8528ebd85934ea69ca4847fc4f09, type: 3}
