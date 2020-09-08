@@ -5,7 +5,7 @@ using UnityEngine;
 public class Flock : MonoBehaviour
 {
     public FlockAgent agentPrefab;
-    List<FlockAgent> agents = new List<FlockAgent>();
+    public List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehavior behavior;
 
     [Header("Spawning Settings")]
@@ -71,12 +71,15 @@ public class Flock : MonoBehaviour
     List<Transform>GetNearByObjects(FlockAgent agent)
     {
         List<Transform> context = new List<Transform>();
-        Collider[] contextColliders = Physics.OverlapSphere(agent.transform.position, neighborRadius);
-        foreach (Collider collider in contextColliders)
+        if (agent)
         {
-            if(collider != agent.GetAgentCollider)
+            Collider[] contextColliders = Physics.OverlapSphere(agent.transform.position, neighborRadius);
+            foreach (Collider collider in contextColliders)
             {
-                context.Add(collider.transform);
+                if(collider != agent.GetAgentCollider)
+                {
+                    context.Add(collider.transform);
+                }
             }
         }
         return context;
