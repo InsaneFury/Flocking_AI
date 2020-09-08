@@ -16,9 +16,9 @@ public class DebugPath : MonoBehaviour
         for (int i = 0; i < points.Length; i++)
         {
                 if(i+1 < points.Length)
-                Debug.DrawLine(points[i].position, points[i + 1].position, Color.red);
+                Debug.DrawLine(points[i].position, points[i + 1].position, Color.cyan);
                 else
-                Debug.DrawLine(points[i].position, points[0].position, Color.red);
+                Debug.DrawLine(points[i].position, points[0].position, Color.cyan);
         }
     }
 
