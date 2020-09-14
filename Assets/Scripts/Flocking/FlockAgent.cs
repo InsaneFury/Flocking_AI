@@ -10,6 +10,8 @@ public class FlockAgent : MonoBehaviour
     private Collider agentCollider;
     public Flock GetAgentFlock => agentFlock;
     public Collider GetAgentCollider => agentCollider;
+
+    public GameObject threat;
     void Start()
     {
         agentCollider = GetComponent<Collider>();
@@ -24,5 +26,16 @@ public class FlockAgent : MonoBehaviour
     {
         transform.forward = velocity;
         transform.position += velocity * Time.deltaTime;
+    }
+
+    public void TransformToThreat(float range)
+    {
+        Collider[] food = Physics.OverlapSphere(transform.position, range);
+        for (int i = 0; i < food.Length; i++)
+        {
+            Instantiate(threat, transform.position, Quaternion.identity);
+            Destroy(food[i].gameObject);
+        }
+        Debug.Log($"Agent {gameObject.name} has transformed to an enemy");
     }
 }

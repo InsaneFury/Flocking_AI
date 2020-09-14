@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1463216093, guid: c717f817a496cf247a92b830b355a407, type: 3}
+      propertyPath: threat
+      value: 
+      objectReference: {fileID: 9011354537500899213, guid: 9fba2ad86d556bf44afb00559a81aac6, type: 3}
     - target: {fileID: 1046869630431942, guid: c717f817a496cf247a92b830b355a407, type: 3}
       propertyPath: m_Name
       value: FantasyBee Variant

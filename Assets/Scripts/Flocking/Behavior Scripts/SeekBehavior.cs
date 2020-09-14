@@ -26,8 +26,9 @@ public class SeekBehavior : FilterFlockBehaviour
             {
                 if (Vector3.SqrMagnitude(closestPoint - agent.transform.position) < eatRadius)
                 {
+                    
                     flock.agents.Remove(agent);
-                    Destroy(agent);
+                    agent.TransformToThreat(eatRadius);
                     return Vector3.zero;
                 }
                 avoidanceMove +=  closestPoint - agent.transform.position;

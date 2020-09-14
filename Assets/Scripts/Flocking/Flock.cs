@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Flock : MonoBehaviour
 {
-    public FlockAgent agentPrefab;
+    public GameObject agentPrefab;
     public List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehavior behavior;
 
@@ -39,33 +39,38 @@ public class Flock : MonoBehaviour
 
         for (int i = 0; i < startingCount; i++)
         {
-            FlockAgent agentToSpawn = Instantiate(
-                agentPrefab,
+            GameObject agentToSpawn = Instantiate(
+                agentPrefab.gameObject,
                 Random.insideUnitSphere * startingCount * agentDensity + spawnPosition.position,
                 Random.rotation,
                 transform
                 );
             agentToSpawn.name = $"Agent {i}";
-            agentToSpawn.Initialize(this);
-            agents.Add(agentToSpawn);
+            agentToSpawn.GetComponent<FlockAgent>().Initialize(this);
+            agents.Add(agentToSpawn.GetComponent<FlockAgent>());
         }   
     }
     public float GetSquareAvoidanceRadius => squareAvoidanceRadius;
 
     void Update()
     {
-        foreach (FlockAgent agent in agents)
+        
+        for (int i = 0; i < agents.Count; i++)
         {
-            List<Transform> context = GetNearByObjects(agent);
-
-            Vector3 move = behavior.CalculateMove(agent, context, this,points);
-            move *= driveFactor;
-            if (move.sqrMagnitude > squareMaxSpeed)
+            if (agents[i])
             {
-                move = move.normalized * maxSpeed;
+                List<Transform> context = GetNearByObjects(agents[i]);
+
+                Vector3 move = behavior.CalculateMove(agents[i], context, this,points);
+                move *= driveFactor;
+                if (move.sqrMagnitude > squareMaxSpeed)
+                {
+                    move = move.normalized * maxSpeed;
+                }
+                agents[i].Move(move);
             }
-            agent.Move(move);
         }
+        
     }
 
     List<Transform>GetNearByObjects(FlockAgent agent)
