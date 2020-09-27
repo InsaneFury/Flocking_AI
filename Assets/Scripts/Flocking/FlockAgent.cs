@@ -6,12 +6,16 @@ using UnityEngine;
 public class FlockAgent : MonoBehaviour
 {
 
+    public LayerMask foodLayer;
     private Flock agentFlock;
     private Collider agentCollider;
     public Flock GetAgentFlock => agentFlock;
     public Collider GetAgentCollider => agentCollider;
-
     public GameObject threat;
+
+    public int foodEaten = 0;
+    private int foodLimit = 5;
+
     void Start()
     {
         agentCollider = GetComponent<Collider>();
@@ -30,12 +34,26 @@ public class FlockAgent : MonoBehaviour
 
     public void TransformToThreat(float range)
     {
-        Collider[] food = Physics.OverlapSphere(transform.position, range);
-        for (int i = 0; i < food.Length; i++)
+        Collider[] foodNear = Physics.OverlapSphere(transform.position, range, foodLayer);
+        if(foodNear.Length > 0)
         {
-            Instantiate(threat, transform.position, Quaternion.identity);
-            Destroy(food[i].gameObject);
+            foodNear[0].gameObject.SetActive(false);
+            foodEaten++;
+            Debug.Log($"Agent {gameObject.name} has eaten {foodEaten} foods");
         }
-        Debug.Log($"Agent {gameObject.name} has transformed to an enemy");
+
+        if (CanDie()) 
+        { 
+            Instantiate(threat, transform.position, Quaternion.identity);
+            Debug.Log($"Agent {gameObject.name} has transformed to an enemy");
+        }
+    }
+
+    public bool CanDie()
+    {
+        if(foodEaten >= foodLimit)
+        return true;
+        else
+        return false;
     }
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Seek Behavior
   m_EditorClassIdentifier: 
   filter: {fileID: 11400000, guid: 2e2463ae7cdd62b42a8857540d1771b1, type: 2}
-  seekRadius: 20
+  seekRadius: 80
   eatRadius: 1

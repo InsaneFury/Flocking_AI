@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1046869630431942, guid: c717f817a496cf247a92b830b355a407, type: 3}
       propertyPath: m_Name
-      value: FantasyBee Variant
+      value: FantasyBee Variant 2
       objectReference: {fileID: 0}
     - target: {fileID: 1046869630431942, guid: c717f817a496cf247a92b830b355a407, type: 3}
       propertyPath: m_Layer
@@ -150,6 +150,6 @@ PrefabInstance:
     - target: {fileID: 137177222824363494, guid: c717f817a496cf247a92b830b355a407, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0703dcb3fa92e7d46ab956f0d658f2bb, type: 2}
+      objectReference: {fileID: 2100000, guid: 637f1534caccf3c45838963de504a7a9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c717f817a496cf247a92b830b355a407, type: 3}

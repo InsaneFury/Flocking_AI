@@ -22,12 +22,14 @@ public class SeekBehavior : FilterFlockBehaviour
         for (int i = 0; i < filteredContext.Count; i++)
         {
             Vector3 closestPoint = filteredContext[i].gameObject.GetComponent<Collider>().ClosestPoint(agent.transform.position);
-            if (Vector3.SqrMagnitude(closestPoint - agent.transform.position) < flock.GetSquareAvoidanceRadius + seekRadius)
+            if (Vector3.SqrMagnitude(closestPoint - agent.transform.position) < seekRadius)
             {
                 if (Vector3.SqrMagnitude(closestPoint - agent.transform.position) < eatRadius)
                 {
-                    
-                    flock.agents.Remove(agent);
+                    if (agent.CanDie())
+                    {
+                        flock.agents.Remove(agent);
+                    }
                     agent.TransformToThreat(eatRadius);
                     return Vector3.zero;
                 }
